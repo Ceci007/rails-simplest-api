@@ -8,7 +8,7 @@ module Api
       end
 
       def create 
-        @article = Post.create(article_params)
+        @article = Article.create(article_params)
         if @article.save
           render json: @article, status: 201
         else
